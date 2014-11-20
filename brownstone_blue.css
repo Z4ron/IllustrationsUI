@@ -1,0 +1,127 @@
+body.blue #welcome-buttons { background-color: #b7cde6; background-image: url(../images/-blue/shadow-under-buttons.gif); 
+	/*Rounded Edges*/
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius:10px;}
+body.blue #welcome-buttons a { background-image: url(../images/-blue/btn-welcomepage.gif); }
+body.blue #welcome-buttons a:link,
+body.blue #welcome-buttons a:visited { color: #175daa; }
+body.blue #billboard { background: #e5edf6; }
+body.blue #billboard p { color: #6b98c9; }
+body.blue span.hint { color: #6b98c9; }
+
+body.blue .btn.disabled span { border-color: #b7cde6; }
+body.blue .btn.disabled span span { border-color: #b7cde6; }
+body.blue a.btn.disabled:link,
+body.blue a.btn.disabled.visited { color: #b7cde6; }
+body.blue a.btn.disabled:hover,
+body.blue a.btn.disabled.active { color: #b7cde6; }
+
+body.blue .btn span {  
+	/*Gradient*/
+    color:#3F6692;
+	font-weight:bold;                
+    background: -moz-linear-gradient(top, #ffffff 0%, #abd3ee 50%,#E5EDF6 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(50%,#abd3ee), color-stop(100%,#E5EDF6)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 50%,#E5EDF6 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 0%,#abd3ee 50%,#E5EDF6 100%); /* Opera11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#abd3ee 50%,#E5EDF6 100%); /* IE10+ */
+    background: linear-gradient(top, #ffffff 0%,#abd3ee 50%,#E5EDF6 100%); 
+	background-image: url(../images/-blue/btn-bgd.gif); border-color: #6b98c9;
+}
+body.blue .btn.sm span { /*BUTTONS ON MY CASES/CASE INFO SCREEN*/
+	/*Gradient*/
+    color:#3F6692;
+	font-weight:bold;                
+	/*Rounded Edges*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius:5px;
+	background-image: url(../images/-blue/btn-bgd.gif); 
+	border-color: #6b98c9; /*Match brownstone_blue.css, JIRA: OACONV-109, 8.1conv*/
+	}
+body.blue .btn.sm span:hover { 
+    color:#000000;
+	}
+body.blue .btn span span { border-color: #6b98c9; }
+      
+body.blue #case-form ul.form-row li input,
+body.blue #case-form ul.form-row li select { border-color: #6b98c9; }      
+
+body.blue .case-header-pane,
+body.blue #case-header { background: #b7cde6; }
+
+body.blue ul#tabs { background: #b7cde6; }
+
+body.blue #mycases-header,
+body.blue #mycases-search {	background: #b7cde6; }
+
+body.blue table.mycases-table {	border-right: 5px solid #b7cde6; border-left: 5px solid #b7cde6; }
+body.blue table.mycases-table tbody tr { border-top: 1px solid #b7cde6; }
+
+body.blue #mycases-footer { background: #b7cde6;	-moz-border-top-left-radius: 10px;
+	-moz-border-bottom-right-radius: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-webkit-border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px; }
+
+body.blue ul#case-status li { border-right: 1px solid #b7cde6; }
+
+body.blue #case-form #save { border-color: #b7cde6; }
+body.blue #case-form h4 {	background: #b7cde6;	
+	-moz-border-top-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px; }
+body.blue #case-form ul.form-row { border-color: #b7cde6; }
+body.blue #case-form ul.form-row li#product-help { border-color: #b7cde6; }
+
+body.blue table.carrier-product-table { border-color: #b7cde6; }
+body.blue table.carrier-product-table tr th { border-color: #b7cde6; }
+body.blue table.carrier-product-table tr td { border-color: #b7cde6; }
+
+body.blue table.mycases-table th { background: #e5edf6; }
+body.blue table.mycases-table th.date span { background-color: #e5edf6; }
+
+body.blue #case-form fieldset { background: #e5edf6; }
+
+body.blue #app-left { background: #e5edf6; }
+body.blue #app-main { background: #e5edf6; }
+
+body.blue #case-header td#carrier img { border-color: #8eb1d7; }
+
+body.blue #mycases-header {	border-color: #8eb1d7;	-moz-border-top-left-radius: 10px;
+	-moz-border-top-right-radius: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-webkit-border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px; }
+
+/* ---------- background images ---------- */
+
+body.blue table.mycases-table th.alert-icon { background: #e5edf6 url(../images/-blue/alerticon-colheader.png) right no-repeat; }
+
+body.blue #content-wrapper { background-image: url(../images/-blue/background-rightsidebar.gif); }
+
+/*body.blue #nav-util a#mycases {	background-image: url(../images/-blue/btn-mycases.gif); }*/
+
+body.blue #welcome-buttons a#tour { background-image: url(../images/-blue/btn-playtour.gif); }
+
+body.blue ul#tabs li a,
+body.blue ul#tabs li a span { background-image: url(../images/-blue/tab.gif); }
+
+body.blue ul#tabs li.alert a,
+body.blue ul#tabs li.alert a span { background-image: url(../images/-blue/tab-alert.gif); }
+
+body.blue ul#tabs li.esign a,
+body.blue ul#tabs li.esign a span { background-image: url(../images/-blue/tab-esign.gif); }
+
+body.blue ul#tabs li.esign.alert a,
+body.blue ul#tabs li.esign.alert a span { background-image: url(../images/-blue/tab-esign-alert.gif); }
+
+body.blue #branding { background-image: url(../images/-blue/topline.gif); }
+
+

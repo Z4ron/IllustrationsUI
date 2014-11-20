@@ -1,0 +1,841 @@
+/* ============ iPipeline copyright 2009 =============== */
+
+body {  
+	font-family: Arial Unicode MS,arial, helvetica, sans-serif;
+	font-size: 12px;
+	color: #000;
+	background: #fff;
+ 	padding-bottom: 60px;
+}
+
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+	font-size: 11px;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+/* ----- standard links ----- */
+
+a:link,
+a:visited {
+	color: #175daa;
+	text-decoration: underline;
+}
+
+a:hover,
+a:active { 
+	color: #000;
+	text-decoration: underline;
+}
+
+/* ---------- .btn ---------- */
+
+.btn {
+      display:inline-block;
+      background:none;
+      margin:0;
+      padding:7px 0;
+      border-width:0;
+      overflow:visible;
+      font-size: 14px;
+      text-decoration:none;
+      color:#000;
+      }
+
+ .btn.sm { font-size: 11px; padding: 6px 0; }
+
+* html button.btn {
+      padding-bottom:1px;
+}
+
+    /* Immediately below is a temporary hack to serve the 
+       following margin values only to Gecko browsers
+       Gecko browsers add an extra 3px of left/right 
+       padding to button elements which can't be overriden.
+       Thus, we use -3px of left/right margin to overcome this. */
+
+    html:not([lang*=""]) button.btn {
+      margin:0 -3px;
+      }
+
+    .btn span {
+      background:#fff url(../images/btn-bg.gif) bottom repeat-x;
+      margin:0;
+      padding:6px 0;
+      border-left:1px solid;
+      border-right:1px solid;
+      }
+      
+     .btn.disabled span { border-color: #b7cde6; }
+      
+     .btn.sm span { padding:4px 0 4px 0; background:#fff bottom repeat-x; }
+     
+    * html .btn span {
+      padding-top:0;
+      }
+      
+    .btn span span {
+      position:relative;
+      padding:6px 10px;
+      border-width:0;
+      border-top:1px solid;
+      border-bottom:1px solid;
+      }
+      
+    .btn.disabled span span { border-color: #b7cde6; }
+    
+    .btn.sm span span { padding:4px 10px; }
+
+          
+    /* only needed if implementing separate hover/focus/active state for buttons */
+    .btn:hover span, .btn:hover span span, .btn:focus span, .btn:focus span span {
+      cursor:pointer; /* important for any clickable/pressable element */
+      border-color:#000 !important;
+      color:#000;
+      }
+    .btn:active span {
+      background-position:0 -400px;
+      outline:none;
+      }
+    .btn:focus, .btn:active {
+      outline:none; /* doesn't seem to be respected for <button>, only <a> */
+      }
+ 
+a.btn:link,
+a.btn:visited { color: #000; text-decoration: none; }  
+a.btn:hover,
+a.btn:active { color: #000; text-decoration: none; }
+
+a.btn.disabled:link,
+a.btn.disabled.visited { color: #b7cde6; text-decoration: none; }
+a.btn.disabled:hover,
+a.btn.disabled.active { color: #b7cde6; text-decoration: none; }
+
+/* ---------- .alert-popup ---------- */
+
+.bubbleInfo {
+    position: relative;
+    height: 100px;
+    width: 50px;
+}
+
+.popup {
+	width: 100px;
+	height: 50px;
+	background: red;
+    position: absolute;
+    z-index: 50;
+    display: none; /* keeps the popup hidden if no JS available */
+}
+
+.trigger {
+            position: absolute;
+        }
+
+
+/* --------------------------------------- */
+/* Containers                              */
+/* --------------------------------------- */
+
+.container {
+	margin: 0 auto 0 auto;
+	width: 980px;
+	position: relative;
+}
+
+/* --------- #branding ---------- */
+
+#branding {
+	position: absolute;
+	bottom: 20px;
+	overflow: hidden;
+	background: bottom no-repeat;
+}
+
+#branding a#logo 
+{
+    border: 0px red solid;
+	float: left;
+	display: block;
+}
+
+#branding a#powered {
+	float: right;
+	display: block;
+	width: 149px;
+	height: 19px;
+}
+
+/* ---------- #nav-util ---------- */
+
+#nav-util {
+	padding: 11px 0;
+	height: 24px;
+	width: 100%;
+	overflow: hidden;
+}
+
+#nav-util ul#nav-util-links {
+	float: right;
+}
+
+#nav-util ul#nav-util-links li {
+	display: inline;
+	line-height: 24px;
+	color: #175daa;
+}
+
+#nav-util ul#nav-util-links li a {
+	display:inline-block;
+}
+
+#nav-util td:first-child {
+    vertical-align:top;
+}
+
+
+#nav-util ul#nav-util-links li#username {
+	color: #000;
+}
+#nav-util ul#nav-util-links li#liAgentOfRecordLabel {
+	color: #000;
+	font-size:9pt;
+}
+#nav-util ul#nav-util-links a#MyWritingAgentLink {
+	color: #ff5400;
+	font-size:9pt;
+}
+#nav-util ul#nav-util-links a#UserProfileLink {
+	color: #ff5400;
+	font-size:9pt;
+}
+
+#nav-util ul#nav-util-links li a {
+	margin: 0 5px;
+}
+
+#nav-util ul#nav-util-links li.last a {
+	margin-right: 0;
+}
+
+/* --------- #content ---------- */
+
+#content-wrapper {
+	width: 980px;
+	overflow: hidden;
+	background: repeat-y;
+}
+
+#content {
+	width: 980px;
+	overflow: hidden;
+}
+
+#content.left {
+	float: left;
+	width: 835px;
+	overflow: hidden;
+}
+
+/* ---------- #welcome-buttons ---------- */
+
+#welcome-buttons {
+	padding: 35px 0 30px 0;
+	width: 980px;
+	overflow: hidden;
+	text-align: center;
+	background: 0px 287px no-repeat;
+}
+
+#welcome-buttons a#newcase-button,
+#welcome-buttons a#mycases-button {
+	display: block;
+	float: left;
+	width: 445px;
+	height: 217px;
+	font-size: 36px;
+	text-align: center;
+	line-height: 217px;
+}
+
+#welcome-buttons a#newcase-button { 
+	margin-left: 35px; 
+	display: inline; 
+}
+
+#welcome-buttons a#newcase-button:link,
+#welcome-buttons a#newcase-button:visited {
+	background-position: 0px -217px;
+	text-decoration: none;
+}
+
+#welcome-buttons a#newcase-button:hover,
+#welcome-buttons a#newcase-button:active {
+	color: #000;
+	background-position: 0px 0px;
+	text-decoration: none;
+}
+
+#welcome-buttons a#mycases-button { 
+	margin-left: 20px; 
+	margin-right: 35px; 
+}
+
+#welcome-buttons a#mycases-button:link,
+#welcome-buttons a#mycases-button:visited {
+	background-position: 0px -217px;
+	text-decoration: none;
+}
+
+#welcome-buttons a#mycases-button:hover,
+#welcome-buttons a#mycases-button:active {
+	color: #000;
+	background-position: 0px 0px;
+	text-decoration: none;
+}
+
+#welcome-buttons a#tour {
+	float: left;
+	margin-top: 65px;
+	margin-left: 396px;
+	padding-left: 48px;
+	height: 38px;
+	font-size: 22px;
+	font-style: italic;
+	line-height: 38px;
+	background: no-repeat;
+}
+
+#welcome-buttons a#tour:link,
+#welcome-buttons a#tour:visited {
+	background-position: 0px -38px;
+	text-decoration: none;
+}
+
+#welcome-buttons a#tour:hover,
+#welcome-buttons a#tour:active {
+	background-position: 0px 0px;
+	text-decoration: underline;
+}
+
+/* ---------- #case-header --------- */
+
+#case-header {
+	padding: 15px;
+	width: 805px;
+	overflow:auto  hidden;
+	font-size: 15px;
+}
+
+#case-header table#policy-carrier {
+	float: left;
+	width: 648px;
+}
+
+#case-header table#policy-carrier td#policy { width: 1px; white-space: nowrap; padding-right: 15px; }
+#case-header table#policy-carrier td#carrier {  }
+
+#case-header td#policy span#casename {
+	display: block;
+	padding-bottom: 8px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#case-header td#carrier span#product {
+	line-height: 18px;
+}
+
+#case-header td#carrier img {  float: left; display: block; padding-left: 15px; padding-right: 15px; border-left: 1px solid; }
+#case-header td#carrier.captive { padding-left: 0; } 
+
+#case-header #case-actions { 
+	float: right;
+	width: 157px; 
+}
+
+/*==================================================*/
+
+ul#tabs {
+	display: block;
+	clear: both;
+	padding-left: 15px;
+	width: 820px;
+	overflow: hidden;
+}
+
+ul#tabs li {
+	float: left;
+	display: inline;
+	margin-right: 5px;
+	height: 60px;
+}
+
+ul#tabs li a,
+ul#tabs li a span {
+	float: left;
+	display: block;
+	padding-right: 35px;
+	height: 60px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 18px;
+	text-align: center;
+}
+
+ul#tabs li a span { height: 48px; padding-top: 12px; }
+ul#tabs li a.single span { height: 36px; padding-top: 24px;  }
+
+ul#tabs li a:link,
+ul#tabs li a:visited {
+	color: #175daa;
+	text-decoration: none;
+	background-position: right 0px;
+}
+
+ul#tabs li a:hover,
+ul#tabs li a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+ul#tabs li a span {
+	padding-right: 0;
+	padding-left: 35px;
+	background-position: left 0px;
+}
+
+ul#tabs li.current a:link,
+ul#tabs li.current a:visited {
+	color: #000;
+	text-decoration: none;
+	background-position: right -60px;
+}
+
+ul#tabs li.current a:hover,
+ul#tabs li.current a:active {
+	color: #000;
+	text-decoration: underline;
+}
+
+ul#tabs li.current a span {
+	background-position: left -60px;
+}
+
+ul#tabs li.disable a span {
+	background-position: left 0px;
+}
+
+ul#tabs li.disable a:link,
+ul#tabs li.disable a:visited {
+	color: gray;
+	text-decoration: none;
+	background-position: right 0px;
+}
+
+ul#tabs li.disable a:hover,
+ul#tabs li.disable a:active {
+	color: gray;
+	text-decoration: none;
+	cursor : default ;
+}
+
+ul#tabs li.disable a span {
+	background-position: left 0px;
+}
+
+
+body#new-case ul#tabs li#needs-analysis,
+body#new-case ul#tabs li#quotes-illustrations,
+body#new-case ul#tabs li#application {
+	display: none;
+}
+
+
+/* ---------- #mycases-header ---------- */
+
+#mycases-header,
+#mycases-search {
+	padding: 15px;
+	width: 950px;
+	overflow: hidden;
+}
+
+#mycases-header {
+	border-bottom: 1px solid;
+}
+
+#mycases-search a,
+#mycases-label { font-size: 14px; }
+
+#mycases-header span.title {
+	margin-right: 15px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#mycases-search #search {
+	float: left;
+}
+
+#mycases-search form#search input {
+	margin-right: 5px;
+	padding: 5px 4px;
+	font-size: 15px;
+	color: #999;
+}
+
+#mycases-search form#search a.btn {
+	left: 300px;
+	margin-right: 15px;
+}	
+
+#mycases-search form#case-actions {
+	float: right;
+}
+
+#mycases-search span#select-label {
+	float: left;
+	margin-right: 5px;
+	margin-left: 218px;
+	padding-left: 28px;
+	display: block;
+	font-size: 14px;
+	line-height: 30px;
+	height: 30px;
+	background: url(../images/check-boxes-below.gif) left center no-repeat;
+}
+
+#mycases-search form#case-actions select#actions {
+	height: 18px;
+	padding: 6px 0;
+}
+
+/* ---------- .mycases-table ---------- */
+
+table.mycases-table {
+	clear: both;
+    width: 980px;
+}
+
+table.mycases-table th {
+	margin: 0;
+	padding: 10px 0 10px 10px;
+	font-weight: normal;
+	vertical-align: middle;
+	border-bottom: 0;
+}
+
+table.mycases-table th.select { }
+table.mycases-table th.alert-icon { width: 15px; height: 14px; background: right no-repeat; }
+table.mycases-table th.name { text-align: left; }
+table.mycases-table th.carrier {}
+table.mycases-table th.product { text-align: left; }
+table.mycases-table th.status {}
+table.mycases-table th.date { text-align: right; }
+	
+table.mycases-table th.date span {	
+	margin-right: 10px;
+	padding-right: 14px; 
+	text-align: right; 
+}
+
+table.mycases-table th a {
+	font-weight: normal;
+}
+
+table.mycases-table tr td {
+	padding: 10px 0 10px 10px;
+	line-height: 16px; 
+	background: #fff;
+	vertical-align: middle;
+}
+
+table.mycases-table tr th input,
+table.mycases-table tr td input { padding: 0; margin: 0; }
+
+table.mycases-table td.select { width: 13px; }
+table.mycases-table td.alert-icon { width: 15px; height: 14px; }
+table.mycases-table td.name { }
+table.mycases-table td.carrier { width: 130px; height: 40px; }
+table.mycases-table img.carrierimage { width: 130px; height: 40px; }
+table.mycases-table td.product {}
+
+table.mycases-table td.status, td.status_hover { width: 100px; text-align: center; }
+
+table.mycases-table td.status_hover { text-decoration:underline;cursor:pointer; }
+
+table.mycases-table tr.selected-row td { background: #FFFFA0; }
+
+table.mycases-table tr.alert td.status { color: #ff5400; }
+
+table.mycases-table td.date { padding-right: 10px; width: 100px; text-align: center; }
+
+table.mycases-table td.name a { 
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1;
+}
+
+table.mycases-table td.name a:link,
+table.mycases-table td.name a:visited {
+	text-decoration: none;
+}
+
+table.mycases-table td.name a:hover,
+table.mycases-table td.name a:active {
+	text-decoration: underline;
+}
+
+table.mycases-table td.name span.case-desc {
+	display: block;
+	padding-top: 7px;
+	line-height: 16px;
+}
+
+#mycases-footer {
+	padding: 15px;
+	width: 950px;
+	font-size: 14px;
+	text-align: center;
+}
+
+/* ---------- ul#case-status --------- */
+
+ul#case-status {
+	clear: both;
+	padding: 15px;
+	height: 16px;
+	overflow: hidden;
+}
+
+ul#case-status li {
+	float: left;
+	padding: 0 13px;
+	line-height: 20px;
+}
+
+ul#case-status li.status { 
+	padding-left: 0;
+}
+
+ul#case-status li.date-modified { 
+	padding-right: 0;
+	border: none;
+}
+
+ul#case-status li.status.alert span { 
+	color: #ff5400;
+}
+
+/* ---------- ul#app-alert ---------- */
+
+ul#app-alert {
+	padding: 0 15px;
+}
+
+ul#app-alert li {
+	float: left;
+	width: 805px;
+	padding: 10px 0 0 0;
+	overflow: hidden;
+	border: none;
+}
+
+ul#app-alert li span.alert {
+	margin-right: 7px;
+	padding-left: 22px;
+	font-weight: bold;
+	color: #ff5400;
+	background: url(../images/alerticon.png) left no-repeat;
+}
+
+ul#app-alert li.last { padding-bottom: 10px; }
+  
+
+/* ---------- #case-form ---------- */
+
+#case-form fieldset {
+	margin-bottom: 15px;
+}
+
+#case-form #save {
+	margin-bottom: 0;
+	padding: 0 0 15px 0;
+	background: #fff;
+	border-bottom: 1px solid;
+}
+
+#case-form legend { display: none; }
+
+#case-form h4 {
+	padding: 10px 0 0 15px;
+	height: 25px;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#case-form ul.form-row {
+	padding: 15px;
+	overflow: hidden;
+	border-bottom: 1px solid;
+}
+
+#case-form ul.form-row.last {
+	clear: both;
+	border: none;
+}
+
+#case-form ul.form-row li {
+	float: left;
+	display: inline;
+	margin-right: 15px;
+}
+
+#case-form ul.form-row li.clear {
+	clear: both;
+	margin-top: 15px;
+}
+
+#case-form ul.form-row li#find-products {
+	margin-top: 63px;
+}
+
+#case-form ul.form-row li.right {
+	float: right;
+}
+
+#case-form ul.form-row li label { 
+	display: block; 
+	margin-bottom: 5px;
+}
+
+#case-form ul.form-row li input,
+#case-form ul.form-row li select {
+	padding: 5px 4px;
+	font-size: 15px;
+	border: 1px solid;
+}
+
+#case-form ul.form-row li select {
+	padding: 4px 0 4px 4px;
+}
+
+#case-form ul.form-row li td.select input { border: none; } /* remove borders from radio buttons in product tables */
+
+#case-form ul.form-row li span.hint {
+	margin-right: 35px;
+}
+
+#case-form ul.form-row li input.required,
+#case-form ul.form-row li select.required {
+	background: #FFFFA0;
+}
+
+#case-form ul.form-row li input.required.disabled,
+#case-form ul.form-row li select.required.disabled {
+	background: #ffffe5;
+	color: #ccc;
+}
+
+#case-form ul.form-row li input#month { margin: 0 5px 0 0; width: 30px; }
+#case-form ul.form-row li input#day { margin: 0 5px; width: 30px; }
+#case-form ul.form-row li input#year { margin: 0 15px 0 5px; width: 60px; }
+#case-form ul.form-row li input#description { margin-right: 15px; width: 260px; }
+
+#case-form ul.form-row li#product-help {
+	clear: left;
+	float: none;
+	margin-top: 20px;
+	margin-right: 0;
+	display: block;
+	font-style: italic;
+	padding: 15px 35px;
+	border: 1px solid #b7cde6;
+	background: url(../Images/alerticon.png) #ffe1c3 no-repeat 8px 14px;
+}
+
+table.carrier-product-table {
+	width: 805px;
+	border: 1px solid;
+}
+
+table.carrier-product-table tr th {
+	padding: 10px 0;
+	font-weight: normal;
+	line-height: 13px;
+	border: 1px solid;
+	vertical-align: middle;
+}
+
+table.carrier-product-table tr th.select, 
+table.carrier-product-table tr td.select { border-right: none; }
+table.carrier-product-table tr th.carrier,
+table.carrier-product-table tr td.carrier { text-align: left; border-left: none; border-right: none; }
+table.carrier-product-table tr th.product,
+table.carrier-product-table tr td.product { text-align: left; border-left: none; padding-left: 10px; }
+
+table.carrier-product-table tr td {
+	padding: 10px 0;
+	background: #fff;
+	border: 1px solid;
+	vertical-align: middle;
+}
+
+table.carrier-product-table tr.selected td {
+	background: #FFFFA0;
+}
+
+table.carrier-product-table tr td input { padding: 0; margin: 0 10px; }
+
+table.carrier-product-table tr td.select { width: 13px; }
+table.carrier-product-table tr td.carrier { width: 130px; }
+table.carrier-product-table tr td.product { width: 329px; }
+table.carrier-product-table tr td.needs { width: 100px; vertical-align: bottom; padding: 0; }
+table.carrier-product-table tr td.quotes { width: 100px; vertical-align: bottom;  padding: 0; }
+table.carrier-product-table tr td.igo { width: 100px;  vertical-align: bottom;  padding: 0; }
+
+/* ---------- #app-left ---------- */
+
+#app-left {
+	float: left;
+	width: 215px;
+	overflow: hidden;
+}
+
+#app-main {
+	float: left;
+	margin-left: 20px;
+	width: 600px;
+}
+
+/* ---------- #billboard ---------- */
+
+#billboard {
+	float: right;
+	padding: 15px;
+	width: 95px;
+	overflow: hidden;
+}
+
+#billboard p {
+	text-align: center;
+	font-size: 15px;
+	line-height: 22px;
+}
+
+/* =========================================================== */
+/* Color Variations, based on body class - blue is the default
+/* =========================================================== */
+
